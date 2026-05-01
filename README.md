@@ -21,7 +21,7 @@ Una interfaz web moderna e intuitiva para controlar tu Arduino garage mediante c
 - **Arduino** con código compatible (ver sección de actualización)
 - **Puerto Serial COM9** (o el que uses en tu sistema)
 
-## ⚙️ Instalación
+##  Instalación
 
 1. **Descarga los archivos**:
    - `index.html` - Estructura HTML
