@@ -293,6 +293,3 @@ En `styles.css`, modifica las variables CSS:
 - Líneas terminadas en \n
 - Formato simple y legible
 
-
-
-**Disfruta controlando tu garage desde la web** 🚗✨
