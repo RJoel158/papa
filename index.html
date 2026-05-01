@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Garage Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16v12H4z"></path>
+                        <path d="M8 10v4"></path>
+                        <path d="M12 10v4"></path>
+                        <path d="M16 10v4"></path>
+                    </svg>
+                    <h1>Garage Smart</h1>
+                </div>
+                <div class="connection-status">
+                    <span class="status-indicator" id="statusIndicator"></span>
+                    <span class="status-text" id="statusText">Desconectado</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Connection Panel -->
+            <section class="panel connection-panel">
+                <h2>Conexión</h2>
+                <div class="connection-controls">
+                    <button id="connectBtn" class="btn btn-primary">Conectar Arduino</button>
+                    <button id="disconnectBtn" class="btn btn-secondary" disabled>Desconectar</button>
+                </div>
+                <div class="port-info" id="portInfo"></div>
+            </section>
+
+            <!-- Status Panel -->
+            <section class="panel status-panel">
+                <h2>Estado del Garage</h2>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="status-label">Espacios Disponibles</div>
+                        <div class="status-value" id="spacesValue">--</div>
+                        <div class="capacity-bar">
+                            <div class="capacity-fill" id="capacityFill"></div>
+                        </div>
+                        <div class="capacity-text" id="capacityText"></div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-label">Puerta</div>
+                        <div class="door-status" id="doorStatus">CERRADA</div>
+                        <div class="door-indicator" id="doorIndicator"></div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-label">Sistema</div>
+                        <div class="system-status" id="systemStatus">OK</div>
+                        <div class="status-light active" id="systemLight"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Control Panel -->
+            <section class="panel control-panel">
+                <h2>Controles Manuales</h2>
+                <div class="control-grid">
+                    <button id="openDoorBtn" class="btn btn-control btn-open" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 6v10a2 2 0 0 0 2 2h8"></path>
+                            <path d="M17 8l3-3"></path>
+                            <path d="M17 12l3 3"></path>
+                        </svg>
+                        Abrir Puerta
+                    </button>
+                    <button id="closeDoorBtn" class="btn btn-control btn-close" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 6v10a2 2 0 0 0 2 2h8"></path>
+                            <path d="M17 8l-3 3"></path>
+                            <path d="M17 12l-3 3"></path>
+                        </svg>
+                        Cerrar Puerta
+                    </button>
+                </div>
+            </section>
+
+            <!-- Events Panel -->
+            <section class="panel events-panel">
+                <div class="panel-header">
+                    <h2>Historial de Eventos</h2>
+                    <button id="clearEventsBtn" class="btn btn-small">Limpiar</button>
+                </div>
+                <div class="events-list" id="eventsList">
+                    <div class="event-placeholder">Esperando eventos...</div>
+                </div>
+            </section>
+
+            <!-- Sensor Data Panel -->
+            <section class="panel sensor-panel">
+                <h2>Datos de Sensores</h2>
+                <div class="sensor-grid">
+                    <div class="sensor-card">
+                        <div class="sensor-label">Entrada</div>
+                        <div class="sensor-value" id="sensorEntrada">-- cm</div>
+                        <div class="sensor-indicator" id="indicatorEntrada"></div>
+                    </div>
+                    <div class="sensor-card">
+                        <div class="sensor-label">Salida</div>
+                        <div class="sensor-value" id="sensorSalida">-- cm</div>
+                        <div class="sensor-indicator" id="indicatorSalida"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Sistema de Garage Inteligente • Arduino + Web Serial API</p>
+        </footer>
+    </div>
+
+    <script src="serial.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

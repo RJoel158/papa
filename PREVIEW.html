@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview - Garage Inteligente</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        h1 { color: #0066cc; margin-bottom: 30px; text-align: center; }
+        .preview { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
+        .section { background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #0066cc; }
+        .section h2 { color: #004a99; margin-bottom: 15px; font-size: 1.2em; }
+        .feature { margin: 10px 0; padding: 10px; background: white; border-radius: 5px; }
+        .feature strong { color: #0066cc; }
+        .mock-ui { background: #0f172a; color: white; padding: 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9em; overflow-x: auto; margin: 15px 0; }
+        .status-card { display: inline-block; background: #1e293b; padding: 15px; margin: 5px; border-radius: 8px; border: 1px solid #334155; min-width: 150px; }
+        .status-value { font-size: 2em; color: #0066cc; font-weight: bold; }
+        .status-label { font-size: 0.8em; color: #cbd5e1; }
+        .button-demo { display: inline-block; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .btn-primary { background: #0066cc; color: white; }
+        .btn-success { background: #10b981; color: white; }
+        .btn-danger { background: #ef4444; color: white; }
+        .event-item { background: #1e293b; padding: 10px; margin: 5px 0; border-left: 3px solid #0066cc; border-radius: 3px; font-size: 0.85em; color: #cbd5e1; }
+        .icons { display: flex; gap: 20px; justify-content: center; margin: 30px 0; font-size: 4em; }
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .comparison-card { padding: 20px; border-radius: 8px; }
+        .comparison-card h3 { margin-bottom: 15px; }
+        .before { background: #ffe0e0; border: 2px solid #ef4444; }
+        .after { background: #e0ffe0; border: 2px solid #10b981; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        table th, table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        table th { background: #0066cc; color: white; }
+        table tr:hover { background: #f5f5f5; }
+        .checklist { margin: 20px 0; }
+        .checklist li { margin: 8px 0; }
+        .checklist input { margin-right: 10px; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        @media (max-width: 768px) { .preview { grid-template-columns: 1fr; } .comparison { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Garage Inteligente - Preview de Interfaz</h1>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <p style="font-size: 1.1em; color: #666;">
+                Una interfaz web moderna, intuitiva y profesional para controlar tu garage desde cualquier lugar.
+            </p>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">📱 Vista Previa de la Interfaz</h2>
+
+        <div class="preview">
+            <div class="section">
+                <h2>🎯 Panel de Control</h2>
+                <div class="mock-ui">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <span style="color: #10b981; font-weight: bold;">● Conectado</span>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-label">Espacios Disponibles</div>
+                        <div class="status-value">4</div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-label">Puerta</div>
+                        <div class="status-value" style="color: #ef4444; font-size: 1em;">CERRADA</div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-label">Sistema</div>
+                        <div class="status-value" style="color: #10b981; font-size: 1em;">OK</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>⚙️ Controles</h2>
+                <div style="padding: 20px; background: white; border-radius: 8px;">
+                    <button class="button-demo btn-success" style="width: 100%; padding: 15px; margin-bottom: 10px;">
+                        ✓ Abrir Puerta
+                    </button>
+                    <button class="button-demo btn-danger" style="width: 100%; padding: 15px;">
+                        ✗ Cerrar Puerta
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="color: #0066cc; margin: 30px 0;">📊 Historial de Eventos en Tiempo Real</h2>
+        <div style="background: #0f172a; border-radius: 8px; overflow: hidden;">
+            <div style="background: #1e293b; padding: 15px; border-bottom: 1px solid #334155;">
+                <span style="color: #cbd5e1;">Últimos eventos ↓</span>
+            </div>
+            <div style="padding: 15px; max-height: 250px; overflow-y: auto;">
+                <div class="event-item">14:23:45 - ✓ Auto salió del garage (Espacios: 4)</div>
+                <div class="event-item">14:20:12 - Auto detectado en entrada</div>
+                <div class="event-item">14:20:10 - Abriendo puerta...</div>
+                <div class="event-item">14:15:38 - Auto detectado en salida</div>
+                <div class="event-item" style="border-left-color: #f59e0b;">14:12:55 - ⚠ Garage LLENO</div>
+                <div class="event-item">14:00:00 - Sistema iniciado</div>
+            </div>
+        </div>
+
+        <h2 style="color: #0066cc; margin: 30px 0;">📈 Datos de Sensores</h2>
+        <div class="preview">
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                <h3>📍 Sensor de Entrada</h3>
+                <div style="font-size: 2em; color: #10b981; margin: 15px 0; font-weight: bold;">5 cm</div>
+                <div style="width: 100%; height: 10px; background: #ddd; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 30%; height: 100%; background: #10b981;"></div>
+                </div>
+                <p style="font-size: 0.8em; color: #666; margin-top: 10px;">Auto detectado ✓</p>
+            </div>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                <h3>📍 Sensor de Salida</h3>
+                <div style="font-size: 2em; color: #999; margin: 15px 0; font-weight: bold;">-- cm</div>
+                <div style="width: 100%; height: 10px; background: #ddd; border-radius: 5px; overflow: hidden;">
+                    <div style="width: 0%; height: 100%; background: #999;"></div>
+                </div>
+                <p style="font-size: 0.8em; color: #666; margin-top: 10px;">Sin detección</p>
+            </div>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">🎨 Características del Diseño</h2>
+
+        <div class="preview" style="grid-template-columns: 1fr;">
+            <div class="section">
+                <h2>✨ Aspectos UX/UI Destacados</h2>
+                <div class="feature">
+                    <strong>🎯 Interfaz Intuitiva</strong> - Diseño limpio que no requiere instrucciones complicadas
+                </div>
+                <div class="feature">
+                    <strong>🎨 Tema Oscuro Premium</strong> - Reduce fatiga visual, ideal para uso prolongado
+                </div>
+                <div class="feature">
+                    <strong>⚡ Animaciones Suaves</strong> - Transiciones elegantes que mejoran la experiencia
+                </div>
+                <div class="feature">
+                    <strong>📱 100% Responsivo</strong> - Funciona perfecto en desktop, tablet y móvil
+                </div>
+                <div class="feature">
+                    <strong>🔴🟢 Indicadores Visuales</strong> - Estados claros con colores significativos
+                </div>
+                <div class="feature">
+                    <strong>⏱️ Feedback en Tiempo Real</strong> - Actualizaciones instantáneas de sensores
+                </div>
+                <div class="feature">
+                    <strong>📊 Historial de Eventos</strong> - Registro completo de todas las acciones
+                </div>
+                <div class="feature">
+                    <strong>🔌 Sin Dependencias Externas</strong> - JavaScript puro, carga rápida
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">🆚 Comparación: Antes vs Después</h2>
+
+        <div class="comparison">
+            <div class="comparison-card before">
+                <h3>❌ Interfaz Típica (No UX)</h3>
+                <ul style="list-style: none;">
+                    <li>✗ Colores planos y aburridos</li>
+                    <li>✗ Botones pequeños y confusos</li>
+                    <li>✗ Sin feedback visual</li>
+                    <li>✗ No responsivo</li>
+                    <li>✗ Lenta y sin animaciones</li>
+                    <li>✗ Difícil de usar</li>
+                    <li>✗ Parece hecha por IA genérica</li>
+                </ul>
+            </div>
+            <div class="comparison-card after">
+                <h3>✅ Interfaz Optimizada (Con UX)</h3>
+                <ul style="list-style: none;">
+                    <li>✓ Colores degradados y modernos</li>
+                    <li>✓ Botones grandes y claros</li>
+                    <li>✓ Feedback inmediato</li>
+                    <li>✓ Se adapta a todo tamaño</li>
+                    <li>✓ Rápida con animaciones suaves</li>
+                    <li>✓ Muy intuitiva</li>
+                    <li>✓ Profesional y única</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">🚀 Guía de Inicio Rápido</h2>
+
+        <table>
+            <tr>
+                <th>Paso</th>
+                <th>Acción</th>
+                <th>Archivo/Referencia</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Copia el código Arduino</td>
+                <td><code>arduino_garage.ino</code></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sube al Arduino en Arduino IDE</td>
+                <td>Tools → Board → Arduino UNO</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Coloca archivos en carpeta</td>
+                <td>Todos los <code>.html</code>, <code>.css</code>, <code>.js</code></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Abre terminal en la carpeta</td>
+                <td>Haz doble click en <code>run.bat</code> (Windows)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Abre navegador</td>
+                <td><code>http://localhost:8000</code></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Conecta Arduino</td>
+                <td>Click "Conectar Arduino" → Selecciona COM9</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>¡Listo!</td>
+                <td>Controla tu garage desde la web</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">📦 Archivos Entregados</h2>
+
+        <div style="columns: 2; gap: 30px;">
+            <div class="section">
+                <h3>🔧 Archivos Funcionales</h3>
+                <ul style="list-style: none;">
+                    <li>✓ <code>index.html</code> - Interfaz web</li>
+                    <li>✓ <code>styles.css</code> - Diseño profesional</li>
+                    <li>✓ <code>app.js</code> - Lógica de app</li>
+                    <li>✓ <code>serial.js</code> - Comunicación serial</li>
+                    <li>✓ <code>arduino_garage.ino</code> - Firmware Arduino</li>
+                    <li>✓ <code>run.bat</code> - Ejecutable (Windows)</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>📚 Documentación</h3>
+                <ul style="list-style: none;">
+                    <li>✓ <code>README.md</code> - Completa</li>
+                    <li>✓ <code>QUICK_START.md</code> - Inicio rápido</li>
+                    <li>✓ <code>TROUBLESHOOTING.md</code> - Soluciones</li>
+                    <li>✓ <code>ARCHITECTURE.md</code> - Técnica</li>
+                    <li>✓ <code>CUSTOMIZATION.md</code> - Personalización</li>
+                    <li>✓ <code>INDEX.md</code> - Índice</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">✅ Checklist Final</h2>
+
+        <div class="checklist">
+            <h3>Antes de empezar:</h3>
+            <ul style="margin-left: 20px;">
+                <li>☐ Tienes Arduino conectado por USB</li>
+                <li>☐ Arduino tiene el código <code>arduino_garage.ino</code> subido</li>
+                <li>☐ Tienes navegador Chrome, Edge u Opera</li>
+                <li>☐ Tienes Python instalado (o node.js)</li>
+                <li>☐ Todos los archivos están en la carpeta <code>papa</code></li>
+            </ul>
+        </div>
+
+        <div class="checklist">
+            <h3>Durante la conexión:</h3>
+            <ul style="margin-left: 20px;">
+                <li>☐ El indicador pasa de rojo a verde</li>
+                <li>☐ Los botones se activan</li>
+                <li>☐ Aparecen valores en los sensores</li>
+                <li>☐ Se registran eventos en el historial</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <h2 style="color: #0066cc; margin: 30px 0;">💡 Datos Técnicos</h2>
+
+        <table>
+            <tr>
+                <th>Aspecto</th>
+                <th>Especificación</th>
+            </tr>
+            <tr>
+                <td>Puerto Serial</td>
+                <td>COM9 (configurable)</td>
+            </tr>
+            <tr>
+                <td>Baudrate</td>
+                <td>9600 bps</td>
+            </tr>
+            <tr>
+                <td>Navegadores</td>
+                <td>Chrome 89+, Edge 89+, Opera 75+</td>
+            </tr>
+            <tr>
+                <td>Tamaño Total</td>
+                <td>~45 KB (sin documentación)</td>
+            </tr>
+            <tr>
+                <td>Tiempo de Carga</td>
+                <td>&lt;1 segundo</td>
+            </tr>
+            <tr>
+                <td>Dependencias JS</td>
+                <td>0 (JavaScript puro)</td>
+            </tr>
+            <tr>
+                <td>Frecuencia Sensores</td>
+                <td>2 lecturas/segundo</td>
+            </tr>
+            <tr>
+                <td>Historial Máximo</td>
+                <td>50 eventos</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+        <div style="text-align: center; margin: 40px 0; padding: 30px; background: #e6f2ff; border-radius: 10px; border: 2px solid #0066cc;">
+            <h2 style="color: #004a99; margin-bottom: 15px;">🎉 ¡Listo para Usar!</h2>
+            <p style="font-size: 1.1em; color: #0066cc; margin-bottom: 20px;">
+                Tienes una aplicación web profesional, moderna e intuitiva para controlar tu garage.
+            </p>
+            <p style="color: #666;">
+                <strong>Características destacadas:</strong> Sin dependencias externas, comunicación bidireccional en tiempo real, 
+                interfaz responsiva, historial de eventos, indicadores visuales claros y animaciones suaves.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0; color: #666; font-size: 0.9em;">
+            <p>Proyecto: Sistema de Garage Inteligente con Arduino + Web</p>
+            <p>Versión: 1.0 | Fecha: Abril 2026</p>
+            <p style="margin-top: 15px;">
+                <a href="QUICK_START.md" style="color: #0066cc; text-decoration: none;">📖 Leer QUICK_START →</a> | 
+                <a href="README.md" style="color: #0066cc; text-decoration: none;">📚 Leer README →</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
