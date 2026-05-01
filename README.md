@@ -2,17 +2,17 @@
 
 Una interfaz web moderna e intuitiva para controlar tu Arduino garage mediante comunicación por puerto serial.
 
-## 🚀 Características
+##  Características
 
-✅ **Conexión en tiempo real** - Web Serial API para comunicación directa con Arduino  
-✅ **Panel de control intuitivo** - Interfaz moderna con animaciones suaves  
-✅ **Monitoreo de sensores** - Visualización en tiempo real de entrada/salida  
-✅ **Historial de eventos** - Registro completo de todas las acciones  
-✅ **Indicadores visuales** - LEDs virtuales y barras de estado  
-✅ **Diseño responsive** - Funciona en desktop, tablet y móvil  
-✅ **Tema oscuro** - Interfaz moderna y cómoda
+ **Conexión en tiempo real** - Web Serial API para comunicación directa con Arduino  
+ **Panel de control intuitivo** - Interfaz moderna con animaciones suaves  
+ **Monitoreo de sensores** - Visualización en tiempo real de entrada/salida  
+ **Historial de eventos** - Registro completo de todas las acciones  
+ **Indicadores visuales** - LEDs virtuales y barras de estado  
+ **Diseño responsive** - Funciona en desktop, tablet y móvil  
+ **Tema oscuro** - Interfaz moderna y cómoda
 
-## 📋 Requisitos
+##  Requisitos
 
 - **Navegador moderno** con soporte Web Serial API:
   - Google Chrome 89+
@@ -45,7 +45,7 @@ Una interfaz web moderna e intuitiva para controlar tu Arduino garage mediante c
    - Selecciona tu puerto COM (COM9)
    - ¡Listo!
 
-## 🔄 Actualización del Código Arduino
+##  Actualización del Código Arduino
 
 Para que la aplicación web funcione correctamente, tu Arduino necesita enviar datos estructurados.
 
@@ -185,7 +185,7 @@ void procesarComandos() {
 }
 ```
 
-## 🎮 Uso de la Interfaz
+##  Uso de la Interfaz
 
 ### Conexión
 
@@ -214,7 +214,7 @@ void procesarComandos() {
 - Muestra timestamps precisos
 - Colores por tipo de evento (info, éxito, advertencia, error)
 
-## 🛠️ Personalización
+##  Personalización
 
 ### Cambiar capacidad máxima
 
@@ -245,7 +245,7 @@ En `styles.css`, modifica las variables CSS:
 }
 ```
 
-## 🐛 Solución de Problemas
+##  Solución de Problemas
 
 ### "Web Serial API no soportada"
 
@@ -270,22 +270,15 @@ En `styles.css`, modifica las variables CSS:
 - Prueba manualmente con Arduino IDE
 - Comprueba la alimentación del servo
 
-## 📱 Características de UX
 
-✨ **Animaciones fluidas** - Transiciones suaves en todos los elementos  
-🎨 **Diseño intuitivo** - Botones grandes, colores significativos  
-📊 **Visualización clara** - Gráficos y indicadores en tiempo real  
-♿ **Accesible** - Interfaz clara y fácil de entender  
-📱 **Responsive** - Se adapta a cualquier tamaño de pantalla
-
-## 📝 Notas Importantes
+## Notas Importantes
 
 - La conexión Web Serial solo funciona en navegadores modernos
 - Por seguridad, solo funciona en HTTPS (excepto localhost)
 - Los permisos de hardware se solicitan en cada conexión
 - Los datos no se almacenan permanentemente (solo en memoria)
 
-## 🔧 Técnica
+## Técnica
 
 **Frontend Stack:**
 
@@ -300,15 +293,6 @@ En `styles.css`, modifica las variables CSS:
 - Líneas terminadas en \n
 - Formato simple y legible
 
-## 📞 Soporte
 
-Si encuentras problemas:
-
-1. Comprueba los requisitos
-2. Verifica el código Arduino
-3. Abre la consola del navegador (F12) para errores
-4. Prueba con Arduino IDE Serial Monitor
-
----
 
 **Disfruta controlando tu garage desde la web** 🚗✨
